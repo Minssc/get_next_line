@@ -6,8 +6,14 @@
 /*   By: minsunki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:20:08 by minsunki          #+#    #+#             */
-/*   Updated: 2021/03/07 23:20:23 by minsunki         ###   ########.fr       */
+/*   Updated: 2021/03/07 23:58:20 by minsunki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+int		get_next_line(int fd, char **line)
+{
+	if (fd < 0 || !line)
+		return (0);
+}
