@@ -6,7 +6,7 @@
 /*   By: minsunki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:20:08 by minsunki          #+#    #+#             */
-/*   Updated: 2021/03/21 19:44:03 by minsunki         ###   ########.fr       */
+/*   Updated: 2021/03/21 19:57:46 by minsunki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	get_line(char **dat, char **ret)
 		tmp = *dat;
 		*dat = ft_substr(*dat, nidx + 1, -1);
 		free(tmp);
-		if (!ft_strlen(*dat))
+		if (!(**dat))
 		{
 			free(*dat);
 			*dat = 0;
