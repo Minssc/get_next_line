@@ -6,7 +6,7 @@
 /*   By: minsunki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:20:08 by minsunki          #+#    #+#             */
-/*   Updated: 2021/03/14 21:41:27 by minsunki         ###   ########.fr       */
+/*   Updated: 2021/03/21 19:44:03 by minsunki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	gnl_eof(char **dat, char **ret)
 {
 	if (*dat && get_line(dat, ret))
 		return (1);
-	else if (dat)
+	else if (*dat)
 	{
 		*ret = *dat;
 		*dat = 0;
