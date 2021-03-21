@@ -6,7 +6,7 @@
 /*   By: minsunki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:20:08 by minsunki          #+#    #+#             */
-/*   Updated: 2021/03/21 20:24:19 by minsunki         ###   ########.fr       */
+/*   Updated: 2021/03/21 21:02:24 by minsunki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static int	get_line(char **dat, char **ret)
 		{
 			free(*dat);
 			*dat = 0;
-			return (1);
 		}
 		return (1);
 	}
@@ -90,12 +89,14 @@ int			get_next_line(int fd, char **line)
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ret;
+	size_t	slen;
 
 	if (!s)
 		return (0);
-	if ((unsigned int)ft_strlen(s) < start)
+	slen = ft_strlen(s);
+	if ((unsigned int)slen < start)
 		return (ft_strdup(""));
-	len = (ft_strlen(s + start) < len ? ft_strlen(s + start) : len);
+	len = ((slen - start) < len ? (slen - start) : len);
 	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
 		return (0);
 	ft_strlcpy(ret, s + start, len + 1);
