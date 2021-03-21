@@ -6,7 +6,7 @@
 /*   By: minsunki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:20:08 by minsunki          #+#    #+#             */
-/*   Updated: 2021/03/21 19:57:46 by minsunki         ###   ########.fr       */
+/*   Updated: 2021/03/21 20:24:19 by minsunki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int			get_next_line(int fd, char **line)
 	char		buf[BUFFER_SIZE + 1];
 	ssize_t		rbytes;
 
-	if (fd < 0 || !line)
+	if (fd < 0 || !line || BUFFER_SIZE <= 0)
 		return (-1);
 	while ((rbytes = read(fd, buf, BUFFER_SIZE)) > 0)
 	{
