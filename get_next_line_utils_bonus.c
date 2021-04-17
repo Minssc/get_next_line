@@ -6,11 +6,11 @@
 /*   By: minsunki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:21:10 by minsunki          #+#    #+#             */
-/*   Updated: 2021/03/14 20:54:43 by minsunki         ###   ########.fr       */
+/*   Updated: 2021/04/17 17:40:53 by minsunki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {
